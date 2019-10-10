@@ -17,11 +17,6 @@ import lombok.Data;
 	        this.view = String.format(Constants.DOUBLE_PATH,"facade",
 	               "main");
 	        System.out.println(this.view);
-
-	        
-	      
-	        
-	        
 	        
 	    }
 }
