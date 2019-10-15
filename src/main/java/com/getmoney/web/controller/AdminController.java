@@ -32,6 +32,7 @@ public class AdminController {
 	public String findAdminById(@RequestParam("aid") String aid,
 			@RequestParam("apw") String apw) {
 		
+		//test
 				
 		return "home";
 	}
