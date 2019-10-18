@@ -18,7 +18,7 @@ app = (()=>{
 	let init =()=>{
 					_=$.ctx();
 					js=$.js();
-					authjs=$.js()+'/cmm/auth.js';
+					authjs=js+'/cmm/auth.js';
 					
 				  }
 	
@@ -28,14 +28,10 @@ app = (()=>{
 				$.getScript(authjs)
 		 )
 		 .done(()=>{auth.onCreate()}
-				 
 		 )
 		 .fail(()=>{alert(WHEN_ERR)}
-				
 		 )
 	}
-	
-	return {run:run}
-	
+	return {run}
 })();
 
