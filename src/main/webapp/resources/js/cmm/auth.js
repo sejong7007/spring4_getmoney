@@ -32,8 +32,12 @@ auth = (()=>{
             href : '#',
             click : e=>{
             	e.preventDefault();
-            	let data = {mid : $('#customerid').val(), mpw : $('#password').val()}
-            	alert('전송되는 데이터 : '+ data.mid + data.mpw)
+            	let data = {
+            			mid : $('#customerid').val(), 
+            			mpw : $('#password').val(),
+            			mname : $('#username').val()
+            			}
+            	alert('전송되는 데이터 : '+ data.mid + data.mpw + data.mname)
                 $.ajax({
 			    	url : _+'/customer/join',
 			    	type : 'POST',
@@ -41,7 +45,7 @@ auth = (()=>{
 			    	data : JSON.stringify(data),
 			    	contentType : 'application/json',
 			    	success : d => {
-			    		alert('AJAX 성공 아이디: '+d.mid+', 성공비번: '+d.mpw)
+			    		alert('AJAX 성공 아이디: '+d.mid+', 성공비번: '+d.mpw +d.mname)
 			    		login()
 			    	},
 			    	error : e => {

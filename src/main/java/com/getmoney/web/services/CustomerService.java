@@ -6,4 +6,6 @@ public interface CustomerService {
 
 	public CustomerDTO login(CustomerDTO param);
 	
+	public void join(CustomerDTO param);
+	
 }

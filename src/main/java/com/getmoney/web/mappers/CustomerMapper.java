@@ -9,4 +9,6 @@ public interface CustomerMapper {
 	
 	public CustomerDTO selectByIdPw(CustomerDTO param);
 	
+	public void insertIntoCusData(CustomerDTO param);
+	
 }

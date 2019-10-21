@@ -17,4 +17,9 @@ public class CustomerServiceImpl implements CustomerService {
 		return cusMapper.selectByIdPw(param);
 	}
 
+	@Override
+	public void join(CustomerDTO param) {
+		cusMapper.insertIntoCusData(param);		
+	}
+
 }
