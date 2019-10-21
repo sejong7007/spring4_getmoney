@@ -294,6 +294,6 @@ auth_vue = {
 	},
 	
 	mypage_form: ()=>{
-		return '<h1>My Page</h1>'
+		return 	'<h1>My Page</h1>'
 	}
 };

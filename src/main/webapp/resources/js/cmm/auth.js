@@ -8,6 +8,7 @@ auth = (()=>{
 		js=$.js();
 		auth_vue_js=js+'/vue/auth_vue.js'
 	}
+	
 	let onCreate =()=>{
 		init();
 		$.getScript(auth_vue_js).done(()=>{
@@ -18,9 +19,11 @@ auth = (()=>{
 			})
 		}).fail(()=>{alert(WHEN_ERR)})
 	}
+	
 	let setContentView =()=>{
 		login()
-	}	
+	}
+	
     let join =()=>{
     	$('head').html(auth_vue.join_head())
         $('body').html(auth_vue.join_body())
@@ -60,14 +63,37 @@ auth = (()=>{
         .html(auth_vue.login_body(x))
         $('<button>',{
         	type : "submit",
-        	text : "Sign in",
+        	text : "로그인",
         	click : e => {
         		e.preventDefault()
-        		
+        		let datat = {mid : $('#loginmid').val(), mpw : $('#loginmpw').val()}
+            	alert('전송되는 데이터 : '+ datat.mid + datat.mpw)
+                $.ajax({
+                	url : _+'/customer/login',
+                	type : 'POST',
+                	data : JSON.stringify(datat), 
+                	dateType : 'json',
+                	contentType : 'application/json',
+                	success : d => {
+                		alert(d.mname+'님 환영합니다.')
+                		mypage()
+                	},
+                	error : e => {
+                		alert('AJAX ERROR')
+                	}
+                })
         	}
         })
         .addClass("btn btn-lg btn-primary btn-block")
         .appendTo('#btn_login')
     }
+
+    let mypage =()=>{  
+    	$('head').html(auth_vue.mypage_form())
+        $('body').html(auth_vue.mypage_form())
+    }
+    
 	return {onCreate, join, login}	
+	
 })();
+
