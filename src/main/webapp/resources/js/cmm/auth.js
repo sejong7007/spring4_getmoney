@@ -80,7 +80,7 @@ auth = (()=>{
                 	contentType : 'application/json',
                 	success : d => {
                 		alert(d.mname+'님 환영합니다.')
-                		mypage()
+                		mypage(d)
                 	},
                 	error : e => {
                 		alert('AJAX ERROR')
@@ -92,9 +92,14 @@ auth = (()=>{
         .appendTo('#btn_login')
     }
 
-    let mypage =()=>{  
-    	$('head').html(auth_vue.mypage_form())
-        $('body').html(auth_vue.mypage_form())
+    let mypage =(d)=>{ 
+    	let x = {
+    			mid : d.mid,
+    			mpw : d.mpw,
+    			mname : d.mname
+    	}
+    	$('head').html(auth_vue.mypage_head(x))
+        $('body').html(auth_vue.mypage_body(x))
     }
     
 	return {onCreate, join, login}	
