@@ -294,42 +294,23 @@ auth_vue = {
 	},
 	
 	mypage_head: x=>{
-		return '<head>'+
-		'	<meta charset="UTF-8" />'+
-		'	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">'+
-		'	<title>Document</title>'+
-		'	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">'+
-		'	 <meta charset="utf-8">'+
-		'    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">'+
-		'    <meta name="description" content="">'+
-		'    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">'+
-		'    <meta name="generator" content="Jekyll v3.8.5">'+
-		'    <title>Signin Template · Bootstrap</title>'+
-		'    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/sign-in/">'+
-		'    <style>'+
-		'      .bd-placeholder-img {'+
-		'        font-size: 1.125rem;'+
-		'        text-anchor: middle;'+
-		'        -webkit-user-select: none;'+
-		'        -moz-user-select: none;'+
-		'        -ms-user-select: none;'+
-		'        user-select: none;'+
-		'      }'+
-		'      @media (min-width: 768px) {'+
-		'        .bd-placeholder-img-lg {'+
-		'          font-size: 3.5rem;'+
-		'        }'+
-		'      }'+
-		'    </style>'+
-		'    <!-- Custom styles for this template -->'+
-		'    <link href="'+x.css+'/signin.css" rel="stylesheet">    '+
-		'</head>'
+		return ' <link href="'+x.css+'/signin.css" rel="stylesheet">    '
 	},
 	
 	mypage_body: x=>{
-		return '<body class="text-center">'+
-		'<div>아이디<div>'+
-		x.mid+
+		return '<body class="sejong-oneform">'+
+		'<div></div>'+ x.mid+
+		'<div>여기는 어디??</div>'+x.mpw+
+		'<div>3</div>'+x.mname+
+		'<div>4</div>'+
+		'<div>5</div>'+
+		'<div>6</div>'+
+		'<div>7</div>'+
+		'<div>8</div>'+
+		'<div>9</div>'+
+		'<div>10</div>'+
+		'<div>11</div>'+
+		'<div>12</div>'+
 		'</body>'
 	}
 };

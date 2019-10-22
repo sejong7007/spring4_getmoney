@@ -20,7 +20,7 @@
         SELECT * FROM CUSTOMER WHERE MID LIKE #{mid} AND MPW LIKE #{mpw}
     </select>
 
-    <insert id="insertIntoCusData">
+    <insert id="insertIntoCusData" >
 		INSERT INTO CUSTOMER (MID, MPW, MNAME )
         VALUES ( #{mid}, #{mpw}, #{mname} )
     </insert>
